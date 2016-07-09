@@ -74,7 +74,7 @@ function editPackageJSON (directory, opts, done) {
   })
 
   function writeUpdatedPackage (pkg, done) {
-    fs.writeFile(file, JSON.stringify(pkg, null, 2), done)
+    fs.writeFile(file, JSON.stringify(pkg, null, 2) + '\n', done)
   }
 
   function addLatest (packageName, group) {

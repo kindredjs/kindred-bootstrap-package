@@ -9,7 +9,15 @@
   "scripts": {
     "posttest": "standard"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "inquirer": "^1.0.3",
+    "map-limit": "0.0.1",
+    "npm-stats": "^1.2.0",
+    "remark": "^5.0.1",
+    "semver": "^5.1.0",
+    "touch": "^1.0.0"
+  },
   "devDependencies": {
     "standard": "^7.1.2"
   },
