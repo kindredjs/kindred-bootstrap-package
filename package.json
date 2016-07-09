@@ -1,0 +1,23 @@
+{
+  "name": "kindred-bootstrap-package",
+  "description": "Bootstraps an npm package to follow kindred's recommendations for testing, demos, etc.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "bin": {
+    "kindred-bootstrap-package": "index.js"
+  },
+  "scripts": {
+    "posttest": "standard"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^7.1.2"
+  },
+  "tags": [
+    "ecosystem:kindred"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kindredjs/kindred-bootstrap-package"
+  }
+}
