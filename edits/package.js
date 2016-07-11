@@ -26,7 +26,7 @@ function editPackageJSON (directory, opts, done) {
     pkg.scripts = pkg.scripts || {}
     pkg.dependencies = pkg.dependencies || {}
     pkg.devDependencies = pkg.devDependencies || {}
-    pkg.tags = pkg.tags || []
+    pkg.keywords = pkg.keywords || []
     pkg.repository = pkg.repository || {
       type: 'git'
     }
@@ -34,8 +34,8 @@ function editPackageJSON (directory, opts, done) {
     pkg.repository.url = 'https://github.com/kindredjs/' + opts.packageName
     pkg.scripts.posttest = pkg.scripts.posttest || 'standard'
 
-    if (pkg.tags.indexOf('ecosystem:kindred') === -1) {
-      pkg.tags.unshift('ecosystem:kindred')
+    if (pkg.keywords.indexOf('ecosystem:kindred') === -1) {
+      pkg.keywords.unshift('ecosystem:kindred')
     }
 
     tasks.push(addLatest('standard', 'devDependencies'))

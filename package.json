@@ -21,8 +21,10 @@
   "devDependencies": {
     "standard": "^7.1.2"
   },
-  "tags": [
-    "ecosystem:kindred"
+  "keywords": [
+    "ecosystem:kindred",
+    "bootstrap",
+    "generator"
   ],
   "repository": {
     "type": "git",
