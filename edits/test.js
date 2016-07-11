@@ -11,6 +11,8 @@ function editTestFile (directory, opts, done) {
   var base = path.resolve(__dirname, 'test.base.js')
   var circleFile = path.resolve(directory, 'circle.yml')
   var circleBase = path.resolve(__dirname, 'circle.yml')
+  var appveyorFile = path.resolve(directory, 'appveyor.yml')
+  var appveyorBase = path.resolve(__dirname, 'appveyor.yml')
 
   touch.sync(file)
   touch.sync(circleFile)
@@ -25,8 +27,18 @@ function editTestFile (directory, opts, done) {
 
     fs.readFile(circleFile, 'utf8', function (err, content) {
       if (err) return done(err)
+      if (content.trim()) return doAppveyor()
+      fs.writeFile(circleFile, fs.readFileSync(circleBase, 'utf8'), doAppveyor)
+    })
+  }
+
+  function doAppveyor (err) {
+    if (err) return done(err)
+
+    fs.readFile(circleFile, 'utf8', function (err, content) {
+      if (err) return done(err)
       if (content.trim()) return done()
-      fs.writeFile(circleFile, fs.readFileSync(circleBase, 'utf8'), done)
+      fs.writeFile(appveyorFile, fs.readFileSync(appveyorBase, 'utf8'), done)
     })
   }
 }
