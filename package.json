@@ -1,7 +1,7 @@
 {
   "name": "kindred-bootstrap-package",
   "description": "Bootstraps an npm package to follow kindred's recommendations for testing, demos, etc.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "bin": {
     "kindred-bootstrap-package": "index.js"
